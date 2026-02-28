@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ClinicPro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-clinic-medical"></i>
+                    <h2>Clinic<span>Pro</span></h2>
+                </div>
+            </div>
+            
+            <div class="clinic-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSn7RcaDkqzG1ilmRUs1Oo0Z93fSkjJovaFw&s" alt="Clinic Logo" class="clinic-logo">
+                <h4>City Medical Center</h4>
+                <p>Dr. Sarah Smith</p>
+                <span class="badge premium">Premium Plan</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="appointments.html">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Appointments</span>
+                            <span class="badge">12</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="patients.html">
+                            <i class="fas fa-users"></i>
+                            <span>Patients</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="doctors.html">
+                            <i class="fas fa-user-md"></i>
+                            <span>Doctors</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pharmacy.html">
+                            <i class="fas fa-pills"></i>
+                            <span>Pharmacy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="billing.html">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <span>Billing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <div>
+                        <p>Dr. Sarah Smith</p>
+                        <small>Administrator</small>
+                    </div>
+                </div>
+                <button id="logoutBtn" class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1>Welcome back, Dr. Qathree! 👋</h1>
+                    <p class="date">,Satursday March 1, 2026</p>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search patients, appointments...">
+                    </div>
+                    
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    
+                    <div class="profile-dropdown">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6LkmvicuI7je7Bo6HHzayL3yUrM46BWrxhQ&s" alt="Profile">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Today's Appointments</h3>
+                        <p class="stat-number">24</p>
+                        <span class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +5 from yesterday
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Total Patients</h3>
+                        <p class="stat-number">1,245</p>
+                        <span class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +48 this month
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon orange">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Today's Revenue</h3>
+                        <p class="stat-number">$3,450</p>
+                        <span class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +12% increase
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Average Wait Time</h3>
+                        <p class="stat-number">12 min</p>
+                        <span class="stat-change negative">
+                            <i class="fas fa-arrow-down"></i> -3 min less
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Today's Appointments -->
+            <section class="appointments-section">
+                <div class="section-header">
+                    <h2>Today's Appointments</h2>
+                    <a href="appointments.html" class="view-all">
+                        View All <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="appointments-list">
+                    <div class="appointment-card">
+                        <div class="time">09:00 AM</div>
+                        <div class="patient-info">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6X2LI-C73WXfoTfAWY1fh2e9ojKvPbh8GnA&s" alt="Patient">
+                            <div>
+                                <h4>John Smith</h4>
+                                <p>New Patient</p>
+                            </div>
+                        </div>
+                        <div class="doctor">Dr. Sarah Smith</div>
+                        <div class="status pending">
+                            <span class="dot"></span> Waiting
+                        </div>
+                        <div class="actions">
+                            <button class="btn-icon" title="Start consultation"><i class="fas fa-video"></i></button>
+                            <button class="btn-icon" title="Check-in"><i class="fas fa-check"></i></button>
+                            <button class="btn-icon" title="Reschedule"><i class="fas fa-clock"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="appointment-card">
+                        <div class="time">09:30 AM</div>
+                        <div class="patient-info">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUnnNrF0X5mkDZ3BQ9aM2AZzAuT3hwxXorog&s" alt="Patient">
+                            <div>
+                                <h4>Emma Wilson</h4>
+                                <p>Follow-up</p>
+                            </div>
+                        </div>
+                        <div class="doctor">Dr. Batti</div>
+                        <div class="status completed">
+                            <span class="dot"></span> Completed
+                        </div>
+                        <div class="actions">
+                            <button class="btn-icon"><i class="fas fa-file-prescription"></i></button>
+                            <button class="btn-icon"><i class="fas fa-notes-medical"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="appointment-card">
+                        <div class="time">10:00 AM</div>
+                        <div class="patient-info">
+                            <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYkzjhRh33_NmBc_qdPk7mBGwylKjVR48RiQ&s" alt="Patient">
+                            <div>
+                                <h4>Michael Brown</h4>
+                                <p>Consultation</p>
+                            </div>
+                        </div>
+                        <div class="doctor">Dr. James Wilson</div>
+                        <div class="status in-progress">
+                            <span class="dot"></span> In Progress
+                        </div>
+                        <div class="actions">
+                            <button class="btn-icon"><i class="fas fa-video"></i></button>
+                            <button class="btn-icon"><i class="fas fa-notes-medical"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="action-btn primary">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>New Patient</span>
+                </button>
+                
+                <button class="action-btn">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span>Book Appointment</span>
+                </button>
+                
+                <button class="action-btn">
+                    <i class="fas fa-prescription"></i>
+                    <span>New Prescription</span>
+                </button>
+                
+                <button class="action-btn">
+                    <i class="fas fa-file-invoice"></i>
+                    <span>Create Invoice</span>
+                </button>
+            </div>
+
+            <!-- Recent Patients & Revenue Chart -->
+            <div class="dashboard-grid">
+                <div class="card recent-patients">
+                    <h3>Recent Patients</h3>
+                    <div class="patient-list">
+                        <div class="patient-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuDA1WuLHRPTI9Izo0a-QbBv3kwoTRp3lMOQ&s" alt="Patient">
+                            <div>
+                                <h4>Robert Johnson</h4>
+                                <p>Last visit: Today, 09:00 AM</p>
+                            </div>
+                            <span class="badge">Follow-up</span>
+                        </div>
+                        
+                        <div class="patient-item">
+                            <img src=" https://img.lb.wbmdstatic.com/vim/live/webmd/consumer_assets/site_images/article_thumbnails/BigBead/medical_assistant_bigbead/gty_240318_medical_assistant_bigbead.jpg?resize=750px:*&output-quality=75" alt="Patient">
+                            <div>
+                                <h4>Lisa Anderson</h4>
+                                <p>Last visit: Yesterday</p>
+                            </div>
+                            <span class="badge">New Patient</span>
+                        </div>
+                        
+                        <div class="patient-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjgvKWC-toyTwgbwqiPhv-MT1w3iuuUhehIQ&s " alt="Patient">
+                            <div>
+                                <h4>David Lee</h4>
+                                <p>Last visit: Mar 14, 2024</p>
+                            </div>
+                            <span class="badge">Check-up</span>
+                        </div>
+                        
+                        <div class="patient-item">
+                            <img src=" https://cdn1.internationalsos.com/-/jssmedia/main-site/c/clinics-angola-luanda-desktop.jpg?h=1080&iar=0&w=1920&rev=cb33d8f9651e48a3b695fc527dfc2b22&hash=69F4295D9D6374C1D6582CE49CC2A596" alt="Patient">
+                            <div>
+                                <h4>Maria Garcia</h4>
+                                <p>Last visit: Mar 14, 2024</p>
+                            </div>
+                            <span class="badge">Emergency</span>
+                        </div>
+                    </div>
+                    
+                    <a href="patients.html" class="view-all-link">
+                        View All Patients <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="card revenue-chart">
+                    <div class="chart-header">
+                        <h3>Revenue Overview</h3>
+                        <select class="chart-filter">
+                            <option>This Week</option>
+                            <option>This Month</option>
+                            <option>This Year</option>
+                        </select>
+                    </div>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Upcoming Appointments -->
+            <div class="card upcoming-appointments">
+                <h3>Upcoming Appointments</h3>
+                <div class="appointment-grid">
+                    <div class="upcoming-item">
+                        <div class="date-badge">
+                            <span class="day">15</span>
+                            <span class="month">MAR</span>
+                        </div>
+                        <div class="appointment-details">
+                            <h4>Sarah Johnson</h4>
+                            <p><i class="fas fa-clock"></i> 02:30 PM</p>
+                            <p><i class="fas fa-user-md"></i> Dr. Smith</p>
+                        </div>
+                    </div>
+                    
+                    <div class="upcoming-item">
+                        <div class="date-badge">
+                            <span class="day">15</span>
+                            <span class="month">MAR</span>
+                        </div>
+                        <div class="appointment-details">
+                            <h4>Michael Chen</h4>
+                            <p><i class="fas fa-clock"></i> 03:00 PM</p>
+                            <p><i class="fas fa-user-md"></i> Dr. Wilson</p>
+                        </div>
+                    </div>
+                    
+                    <div class="upcoming-item">
+                        <div class="date-badge">
+                            <span class="day">16</span>
+                            <span class="month">MAR</span>
+                        </div>
+                        <div class="appointment-details">
+                            <h4>Emily Davis</h4>
+                            <p><i class="fas fa-clock"></i> 10:00 AM</p>
+                            <p><i class="fas fa-user-md"></i> Dr. Smith</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <button id="logoutBtn">Logout</button>
+
+    <script type="module" src="js/dashboard.html"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

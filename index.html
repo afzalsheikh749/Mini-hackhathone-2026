@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinicPro - Complete Clinic Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/clinic-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-clinic-medical"></i>
+                <h2>Clinic<span>Pro</span></h2>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-primary" onclick="window.location.href='signup.html'">Sign Up</button>
+            </div>
+            
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero clinic-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Clinic with <span>Digital Excellence</span></h1>
+                <p class="hero-subtitle">Complete clinic management solution with paperless records, online appointments, patient management, and more. Start your 14-day free trial today.</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-large" onclick="window.location.href='signup.html'">
+                        <i class="fas fa-play"></i> Start Free Trial
+                    </button>
+                    <button class="btn-secondary btn-large">
+                        <i class="fas fa-video"></i> Watch Demo
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>1000+</h3>
+                        <p>Happy Clinics</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50K+</h3>
+                        <p>Patient Records</p>
+                    </div>
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>Support</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/600x400" alt="Clinic Dashboard Preview" class="dashboard-preview">
+                <div class="floating-card card-1">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>24 Appointments Today</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-users"></i>
+                    <span>1,245 Total Patients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Complete Clinic Management Solution</h2>
+                <p>Everything you need to run your clinic efficiently in one place</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Appointment Management</h3>
+                    <p>Online booking, automated reminders, and smart scheduling system</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Real-time availability</li>
+                        <li><i class="fas fa-check"></i> SMS/Email reminders</li>
+                        <li><i class="fas fa-check"></i> Calendar integration</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Patient Records</h3>
+                    <p>Digital prescriptions, medical history, and reports management</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> EMR/EHR system</li>
+                        <li><i class="fas fa-check"></i> Digital prescriptions</li>
+                        <li><i class="fas fa-check"></i> Lab reports integration</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Pharmacy Management</h3>
+                    <p>Medicine inventory, expiry tracking, and automated alerts</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Stock management</li>
+                        <li><i class="fas fa-check"></i> Expiry alerts</li>
+                        <li><i class="fas fa-check"></i> Supplier management</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Billing & Payments</h3>
+                    <p>Invoicing, insurance claims, and payment tracking</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> GST invoices</li>
+                        <li><i class="fas fa-check"></i> Insurance processing</li>
+                        <li><i class="fas fa-check"></i> Online payments</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics & Reports</h3>
+                    <p>Business insights, revenue tracking, and performance metrics</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Revenue reports</li>
+                        <li><i class="fas fa-check"></i> Patient demographics</li>
+                        <li><i class="fas fa-check"></i> Staff performance</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Telemedicine</h3>
+                    <p>Video consultations and secure messaging</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> HD video calls</li>
+                        <li><i class="fas fa-check"></i> Secure chat</li>
+                        <li><i class="fas fa-check"></i> File sharing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How ClinicPro Works</h2>
+                <p>Get started in three simple steps</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create Your Account</h3>
+                        <p>Sign up for free and set up your clinic profile in minutes</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Add Your Staff</h3>
+                        <p>Invite doctors, nurses, and administrative staff to join</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Start Managing</h3>
+                        <p>Begin scheduling appointments and managing patients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your clinic's needs</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">29</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p>Perfect for small clinics</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 500 patients</li>
+                        <li><i class="fas fa-check"></i> Basic appointment scheduling</li>
+                        <li><i class="fas fa-check"></i> Patient records</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                    </ul>
+                    <button class="btn-primary btn-full">Get Started</button>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Professional</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">59</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p>For growing clinics</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited patients</li>
+                        <li><i class="fas fa-check"></i> Advanced scheduling</li>
+                        <li><i class="fas fa-check"></i> Pharmacy integration</li>
+                        <li><i class="fas fa-check"></i> Billing & invoices</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <button class="btn-primary btn-full">Get Started</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p>For multi-clinic practices</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Professional</li>
+                        <li><i class="fas fa-check"></i> Multi-clinic management</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> API access</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                    </ul>
+                    <button class="btn-primary btn-full">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Trusted by healthcare professionals worldwide</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"ClinicPro has transformed how we manage our practice. The appointment system alone saved us hours of phone calls every day."</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50" alt="Dr. Smith">
+                        <div>
+                            <h4>Dr. Sarah Smith</h4>
+                            <p>City Medical Center, NY</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The pharmacy management feature is a game-changer. We never run out of essential medicines now with automated alerts."</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50" alt="Dr. Johnson">
+                        <div>
+                            <h4>Dr. Sufyian</h4>
+                            <p>Sufiyan Family Clinic, LA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to digitize your clinic?</h2>
+            <p>Join thousands of clinics already using ClinicPro</p>
+            <button class="btn-primary btn-large" onclick="window.location.href='signup.html'">
+                Start Your Free Trial
+            </button>
+            <p class="trial-note">No credit card required • 14-day free trial</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-clinic-medical"></i>
+                        <h3>ClinicPro</h3>
+                    </div>
+                    <p>Modern clinic management solution for healthcare professionals.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#integrations">Integrations</a></li>
+                        <li><a href="#updates">Updates</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#press">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Clinic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
