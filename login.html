@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/auth.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <div class="auth-container">
         <div class="auth-card">
@@ -19,9 +21,9 @@
                 <h1>Create Account</h1>
                 <p>Start your 14-day free trial</p>
             </div>
-            
+
             <form id="signupForm" class="auth-form">
-                <!-- Full Name Field -->
+
                 <div class="form-group">
                     <label for="name">
                         <i class="fas fa-user"></i>
@@ -29,8 +31,8 @@
                     </label>
                     <input type="text" id="name" placeholder="  " required>
                 </div>
-                
-                <!-- Email Field -->
+
+
                 <div class="form-group">
                     <label for="email">
                         <i class="fas fa-envelope"></i>
@@ -38,8 +40,8 @@
                     </label>
                     <input type="email" id="email" placeholder="doctor@clinic.com" required>
                 </div>
-                
-                <!-- Clinic Name Field -->
+
+
                 <div class="form-group">
                     <label for="clinicName">
                         <i class="fas fa-clinic-medical"></i>
@@ -47,8 +49,7 @@
                     </label>
                     <input type="text" id="clinicName" placeholder="City Medical Center" required>
                 </div>
-                
-                <!-- Phone Number Field -->
+
                 <div class="form-group">
                     <label for="phone">
                         <i class="fas fa-phone"></i>
@@ -56,8 +57,8 @@
                     </label>
                     <input type="tel" id="phone" placeholder="+1 234 567 8900" required>
                 </div>
-                
-                <!-- Password Field -->
+
+
                 <div class="form-group">
                     <label for="password">
                         <i class="fas fa-lock"></i>
@@ -70,8 +71,8 @@
                         </button>
                     </div>
                 </div>
-                
-                <!-- Confirm Password Field -->
+
+
                 <div class="form-group">
                     <label for="confirmPassword">
                         <i class="fas fa-lock"></i>
@@ -84,29 +85,29 @@
                         </button>
                     </div>
                 </div>
-                
-                <!-- Terms and Conditions -->
+
+
                 <div class="form-options">
                     <label class="checkbox">
                         <input type="checkbox" required>
                         I agree to the <a href="#">Terms</a> & <a href="#">Privacy Policy</a>
                     </label>
                 </div>
-                
+
                 <button type="submit" class="btn-primary btn-full">
                     <i class="fas fa-user-plus"></i>
                     Sign Up
                 </button>
             </form>
-            
+
             <div class="auth-footer">
                 <p>Already have an account? <a href="login.html">Login</a></p>
             </div>
-            
+
             <div class="auth-divider">
                 <span>or sign up with</span>
             </div>
-            
+
             <div class="social-login">
                 <button class="btn-social google">
                     <i class="fab fa-google"></i>
@@ -118,9 +119,10 @@
                 </button>
             </div>
         </div>
-        
+
         <div class="auth-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LaTVTxjKSfUKU9PfhlqTG7Zydy_jLxJr7Q&s" alt="Clinic">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LaTVTxjKSfUKU9PfhlqTG7Zydy_jLxJr7Q&s"
+                alt="Clinic">
             <div class="features-list">
                 <h3>Why choose ClinicPro?</h3>
                 <ul>
@@ -134,32 +136,31 @@
     </div>
 
     <script type="module">
-        // Import Firebase modules
+
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
         import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-        
-        // Firebase configuration - Replace with your own
+
+
         const firebaseConfig = {
-         apiKey: "AIzaSyAA1XctIHbzSBDtqYk3Qu2DIkjeVUzp4no",
-         authDomain: "clinic-2026.firebaseapp.com",
-         projectId: "clinic-2026",
-         storageBucket: "clinic-2026.firebasestorage.app",
-         messagingSenderId: "759775628649",
-         appId: "1:759775628649:web:05f4f4828f6392dc5841f8"
+            apiKey: "AIzaSyAA1XctIHbzSBDtqYk3Qu2DIkjeVUzp4no",
+            authDomain: "clinic-2026.firebaseapp.com",
+            projectId: "clinic-2026",
+            storageBucket: "clinic-2026.firebasestorage.app",
+            messagingSenderId: "759775628649",
+            appId: "1:759775628649:web:05f4f4828f6392dc5841f8"
         };
 
-        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const db = getFirestore(app);
 
-        // Toggle password visibility for all password fields
+
         document.querySelectorAll('.toggle-password').forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const passwordInput = this.previousElementSibling;
                 const icon = this.querySelector('i');
-                
+
                 if (passwordInput.type === 'password') {
                     passwordInput.type = 'text';
                     icon.classList.remove('fa-eye');
@@ -172,41 +173,38 @@
             });
         });
 
-        // Handle signup form submission
+
         document.getElementById('signupForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            
-            // Get form values
+
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const clinicName = document.getElementById('clinicName').value;
             const phone = document.getElementById('phone').value;
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
-            
-            // Validation
+
+
             if (password !== confirmPassword) {
                 alert('❌ Passwords do not match!');
                 return;
             }
-            
+
             if (password.length < 6) {
                 alert('❌ Password must be at least 6 characters long');
                 return;
             }
-            
+
             try {
-                // Show loading state
+
                 const submitBtn = e.target.querySelector('button[type="submit"]');
                 const originalText = submitBtn.innerHTML;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Account...';
                 submitBtn.disabled = true;
-                
-                // Create user in Firebase Auth
+
                 const userCredential = await createUserWithEmailAndPassword(auth, email, password);
                 const user = userCredential.user;
-                
-                // Save user data to Firestore
+
                 await setDoc(doc(db, "users", user.uid), {
                     name: name,
                     email: email,
@@ -220,10 +218,6 @@
                     updatedAt: new Date().toISOString()
                 });
 
-
-         
-
-                // Save clinic data
                 await setDoc(doc(db, "clinics", user.uid), {
                     name: clinicName,
                     phone: phone,
@@ -243,19 +237,17 @@
                         }
                     }
                 });
-                
-                // Success message
+ 
                 alert('✅ Account created successfully! Welcome to ClinicPro.');
-                
-                // Redirect to dashboard
+
+          
                 window.location.href = 'dashboard.html';
-                
+
             } catch (error) {
                 console.error("Signup error:", error);
-                
-                // Show error message
+ 
                 let errorMessage = '❌ Signup failed: ';
-                switch(error.code) {
+                switch (error.code) {
                     case 'auth/email-already-in-use':
                         errorMessage += 'Email already in use';
                         break;
@@ -268,10 +260,9 @@
                     default:
                         errorMessage += error.message;
                 }
-                
+
                 alert(errorMessage);
-                
-                // Reset button
+ 
                 const submitBtn = e.target.querySelector('button[type="submit"]');
                 submitBtn.innerHTML = '<i class="fas fa-user-plus"></i> Sign Up';
                 submitBtn.disabled = false;
@@ -279,4 +270,5 @@
         });
     </script>
 </body>
+
 </html>

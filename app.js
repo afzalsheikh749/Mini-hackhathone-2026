@@ -11,7 +11,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
-// Initialize Dashboard
+
 async function initDashboard() {
     onAuthStateChanged(auth, async (user) => {
         if (user) {
@@ -26,7 +26,7 @@ async function initDashboard() {
     });
 }
 
-// Load User Data
+ 
 async function loadUserData(userId) {
     const result = await getUserProfile(userId);
     if (result.success) {
@@ -36,7 +36,7 @@ async function loadUserData(userId) {
     }
 }
 
-// Load Today's Appointments
+ 
 async function loadTodayAppointments(userId) {
     try {
         const today = new Date();
@@ -72,7 +72,7 @@ async function loadTodayAppointments(userId) {
     }
 }
 
-// Create Appointment Element
+ 
 function createAppointmentElement(appointment) {
     const div = document.createElement('div');
     div.className = 'appointment-card';
@@ -108,7 +108,7 @@ function createAppointmentElement(appointment) {
     return div;
 }
 
-// Load Recent Patients
+ 
 async function loadRecentPatients(userId) {
     try {
         const patientsQuery = query(
@@ -151,8 +151,7 @@ async function loadRecentPatients(userId) {
         console.error("Error loading patients:", error);
     }
 }
-
-// Load Stats
+ 
 async function loadStats(userId) {
     try {
         // Today's appointments count
@@ -185,7 +184,7 @@ async function loadStats(userId) {
     }
 }
 
-// Initialize Real-time Listeners
+
 function initializeRealtimeListeners(userId) {
     // Listen for new appointments
     const appointmentsQuery = query(
@@ -205,13 +204,12 @@ function initializeRealtimeListeners(userId) {
     });
 }
 
-// Show Notification
+ 
 function showNotification(message) {
-    // You can implement a toast notification here
+     
     console.log("Notification:", message);
 }
 
-// Initialize Chart
 function initChart() {
     const ctx = document.getElementById('revenueChart').getContext('2d');
     new Chart(ctx, {
@@ -253,12 +251,12 @@ function initChart() {
     });
 }
 
-// Event Listeners
+ 
 document.addEventListener('DOMContentLoaded', () => {
     initDashboard();
     initChart();
     
-    // Logout button
+     
     document.getElementById('logoutBtn').addEventListener('click', async () => {
         const result = await logout();
         if (result.success) {
@@ -267,8 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Error logging out: ' + result.error);
         }
     });
-    
-    // Quick action buttons
+     
     document.querySelectorAll('.action-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const action = e.currentTarget.querySelector('span').textContent;
@@ -277,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Handle Quick Actions
+ 
 function handleQuickAction(action) {
     switch(action) {
         case 'New Patient':
